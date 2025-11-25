@@ -1,0 +1,7 @@
+{
+  "name": "EduTutor Agent - Agentic AI Learning Platform",
+  "description": "A world-class educational platform where Agentic AI assists admins, teachers, and students. Features advanced quiz generation by AI agents, automated grading, personalized student feedback, and deep analytics.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
