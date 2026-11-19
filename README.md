@@ -1,64 +1,151 @@
-# EduTutor Agent (QuizMind)
 
-EduTutor Agent (QuizMind) is a **basic prototype** of an AI-powered assessment and feedback system designed to automate quiz generation, answer evaluation, and learning feedback using a multi-agent AI approach.
+# 🎓 EduTutor Agent (QuizMind)
 
----
+### AI-Powered Quiz Generation, Grading & Feedback Prototype
 
-## 🎯 Objective
-To demonstrate how AI agents can support the quiz lifecycle by generating questions, grading responses, and providing explainable feedback with minimal manual effort.
+EduTutor Agent (QuizMind) is a basic prototype exploring how AI agents can automate quiz generation, student answer evaluation, and personalized learning feedback.
 
----
+The project demonstrates a multi-agent approach to simplifying assessment workflows for teachers and students.
 
-## 🏗️ System Overview
+## ✨ Key Features
 
-| Aspect | Description |
-|------|------------|
-| Platform | Web Application (Prototype) |
-| Users | Teachers, Students, Admin |
-| Frontend | React + Tailwind CSS |
-| Backend | FastAPI / Flask |
-| Database | MongoDB |
-| AI Approach | LangChain-based Multi-Agent System |
+- **AI Question Generation:** Generates quiz questions from learning content.
+- **Automated Grading:** Evaluates student answers using AI-assisted assessment.
+- **AI Feedback:** Provides explanations and feedback on student responses.
+- **Personalized Learning:** Suggests areas for improvement.
+- **Role-Based Experience:** Designed for students, teachers, and administrators.
+- **Multi-Agent Workflow:** Separates question generation, grading, feedback, and tutoring responsibilities.
 
----
+## 🛠️ Tech Stack
 
-## 🧠 AI Agents (Prototype Level)
+| Category | Technologies |
+|---|---|
+| Frontend | React 18, TypeScript |
+| Styling | Tailwind CSS |
+| Build Tool | Vite |
+| AI Integration | Google Gemini API |
+| Icons | Lucide React |
+| PDF Generation | jsPDF, jsPDF-AutoTable |
 
-| Agent | Role |
-|------|------|
-| QG-Agent | Generates quiz questions |
-| Grader-Agent | Evaluates student answers |
-| Feedback-Agent | Provides reasoning-based feedback |
-| Tutor-Agent | Suggests learning improvements |
-| Orchestrator-Agent | Controls agent workflow |
+## 🏗️ System Architecture
 
----
+```mermaid
+flowchart TD
+    A["Teacher"] --> B["Learning Content"]
+    B --> C["Question Generation Agent"]
+    C --> D["Generated Quiz"]
+
+    D --> E["Student"]
+    E --> F["Answer Submission"]
+
+    F --> G["Grading Agent"]
+    G --> H["Feedback Agent"]
+    H --> I["Performance Insights"]
+
+    I --> J["Tutor Agent"]
+    J --> K["Learning Recommendations"]
+
+    L["Orchestrator Agent"] --> C
+    L --> G
+    L --> H
+    L --> J
+
+    M["React Frontend"] --> L
+    L --> N["AI Integration - Gemini"]
+```
 
 ## 🔄 Basic Workflow
-- Teacher uploads content → AI generates questions  
-- Student attempts quiz → AI grades answers  
-- System provides feedback and performance insights  
 
----
+1. Teacher provides learning content.
+2. Question Generation Agent prepares quiz questions.
+3. Student attempts the generated quiz.
+4. Grading Agent evaluates the answers.
+5. Feedback Agent generates explanations and feedback.
+6. Tutor Agent suggests learning improvements.
 
-## 📁 Sample Structure
+## 📁 Project Structure
 
 ```text
-quizmind/
-├── frontend/
-├── backend/
-├── docs/
+EduTutor_prototype/
+│
+├── components/
+├── context/
+├── hooks/
+├── services/
+├── App.tsx
+├── index.tsx
+├── types.ts
+├── metadata.json
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── presentation.md
 └── README.md
 ```
 
-## 🚀 Scope & Limitations
-- Prototype-level implementation
-- Focused on core logic, not production scale
-- Limited datasets and predefined AI flows
+## ⚙️ Getting Started
 
----
+### Prerequisites
 
-## 🧾 Summary (Viva Ready)
-“EduTutor Agent (QuizMind) is a basic prototype that demonstrates how multi-agent AI systems can automate quiz generation, grading, and feedback to support adaptive learning.”
+- Node.js
+- npm
+- Google Gemini API key
 
----
+### Clone Repository
+
+```bash
+git clone https://github.com/Chethan13032005/EduTutor_prototype.git
+
+cd EduTutor_prototype
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment
+
+Configure your Gemini API key according to the application's Vite configuration and Gemini service implementation.
+
+Do not commit API credentials to GitHub.
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 📌 Scope & Limitations
+
+- This is an experimental prototype.
+- Focuses on demonstrating an AI-assisted assessment workflow.
+- Uses predefined AI-agent responsibilities.
+- Not designed as a production-ready educational platform.
+- Backend persistence and production deployment are outside the scope of the current repository description.
+
+## 🚀 Future Scope
+
+- Implement persistent student performance tracking.
+- Expand agent coordination and task management.
+- Improve grading accuracy and feedback quality.
+- Introduce comprehensive testing.
+- Develop a dedicated backend and database integration.
+
+## 👨‍💻 Project Information
+
+**Project:** EduTutor Agent (QuizMind)
+
+**Type:** AI/Full-Stack Prototype
+
+**Focus:** Automated Assessment & Personalized Learning
+
+**Repository:** https://github.com/Chethan13032005/EduTutor_prototype
